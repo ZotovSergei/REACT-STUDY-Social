@@ -1,0 +1,8 @@
+.dialogs {
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 15em 1fr;
+}
+.dialogs a {
+    text-decoration: none;
+}

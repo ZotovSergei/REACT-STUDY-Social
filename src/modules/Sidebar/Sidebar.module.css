@@ -1,0 +1,7 @@
+.sidebar {
+    background-color: aqua;
+    grid-area: asside;
+}
+.sidebar a {
+    text-decoration: none;
+}

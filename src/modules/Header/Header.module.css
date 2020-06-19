@@ -1,0 +1,7 @@
+.header {
+    background-color: antiquewhite;
+    grid-area: header;
+}
+.logo {
+    width: 10.2em;
+}

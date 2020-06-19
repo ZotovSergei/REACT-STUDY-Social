@@ -1,0 +1,10 @@
+.avatar {
+    width: 2em;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.message {
+    padding-left: 2em;
+    display: inline-block;
+}
