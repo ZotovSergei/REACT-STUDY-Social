@@ -1,30 +1,26 @@
 import React from "react";
 import style from "./Dialogs.module.css";
-import Posts from "../Main/Posts/Posts";
 import { NavLink } from "react-router-dom";
+import Dialog from "./Dialog/Dialog";
 
 
 
 
-const Dialogs = () => {
-    const dialogsData = [
-        { id: 1, name: 'Host' },
-        { id: 2, name: 'Author' },
-        { id: 3, name: 'FrakenBok' },
-        { id: 4, name: 'SuperMen' },
-    ]
+const Dialogs = (props) => {    
+    const dialogRender = props.state.dialog.map(el => <Dialog dialog={el}/>)
+    
+    const dialogUserRender = 
+        props.state.dialogsUser.map(
+            el => <li className={style.item}><NavLink to={`/dialogs/id${el.id}`}>{`${el.name}`}</NavLink></li>)
 
     return (
         <section className={style.dialogs}>
             <ul className={style.users}>
-                <li className={style.item}><NavLink to={`/dialogs/id${dialogsData[0].id}`}>{`${dialogsData[0].name}`}</NavLink></li>
-                <li className={style.item}><NavLink to={`/dialogs/id${dialogsData[1].id}`}>{`${dialogsData[1].name}`}</NavLink></li>
-                <li className={style.item}><NavLink to={`/dialogs/id${dialogsData[2].id}`}>{`${dialogsData[2].name}`}</NavLink></li>
-                <li className={style.item}><NavLink to={`/dialogs/id${dialogsData[3].id}`}>{`${dialogsData[3].name}`}</NavLink></li>
-            </ul>
-            {/*<div className={style.dialog}>*/}
-            {/*    <Posts />*/}
-            {/*</div>*/}
+                { dialogUserRender }
+            </ul>         
+            <div className={style.dialog}>
+               { dialogRender }               
+            </div>
         </section>
     )
 }

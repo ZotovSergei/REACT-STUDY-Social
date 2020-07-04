@@ -3,12 +3,12 @@ import style from './Main.module.css';
 import Dashboard from "./Dashboard/Dashboard";
 import Posts from "./Posts/Posts";
 
-const Main = () => {
+const Main = (props) => {
     return (
         <main className={style.main}>
-            Main block
+            <h2>Main block</h2>
             <Dashboard/>
-            <Posts/>
+            <Posts postData = {props.state.postData}/>
         </main>
     )
 }

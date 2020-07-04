@@ -4,7 +4,7 @@ import style from "./Post.module.css";
 
 const Post = (props) => {
     return (
-        <section className={style.post}>
+        <section className={style.post}>            
             <h5>
                 New Post
             </h5>

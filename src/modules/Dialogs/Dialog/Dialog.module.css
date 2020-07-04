@@ -1,0 +1,12 @@
+.dialog {
+}
+.message {
+  list-style: none;
+}
+.id {
+  display: none;
+}
+.text {
+  color: brown;
+  font-weight: bold;
+}
